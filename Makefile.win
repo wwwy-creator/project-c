@@ -1,0 +1,64 @@
+# Project: project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = review1.o review2.o review3.o review4.o review5.o review6.o review7.o review8.o review9.o review10.o review12.o review13.o review11.o
+LINKOBJ  = review1.o review2.o review3.o review4.o review5.o review6.o review7.o review8.o review9.o review10.o review12.o review13.o review11.o
+LIBS     = -L"E:/Dev/Dev-Cpp/MinGW64/lib" -L"E:/Dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"E:/Dev/Dev-Cpp/MinGW64/include" -I"E:/Dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Dev/Dev-Cpp/MinGW64/include" -I"E:/Dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = project1.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+review1.o: review1.c
+	$(CC) -c review1.c -o review1.o $(CFLAGS)
+
+review2.o: review2.c
+	$(CC) -c review2.c -o review2.o $(CFLAGS)
+
+review3.o: review3.c
+	$(CC) -c review3.c -o review3.o $(CFLAGS)
+
+review4.o: review4.c
+	$(CC) -c review4.c -o review4.o $(CFLAGS)
+
+review5.o: review5.c
+	$(CC) -c review5.c -o review5.o $(CFLAGS)
+
+review6.o: review6.c
+	$(CC) -c review6.c -o review6.o $(CFLAGS)
+
+review7.o: review7.c
+	$(CC) -c review7.c -o review7.o $(CFLAGS)
+
+review8.o: review8.c
+	$(CC) -c review8.c -o review8.o $(CFLAGS)
+
+review9.o: review9.c
+	$(CC) -c review9.c -o review9.o $(CFLAGS)
+
+review10.o: review10.c
+	$(CC) -c review10.c -o review10.o $(CFLAGS)
+
+review12.o: review12.c
+	$(CC) -c review12.c -o review12.o $(CFLAGS)
+
+review13.o: review13.c
+	$(CC) -c review13.c -o review13.o $(CFLAGS)
+
+review11.o: review11.c
+	$(CC) -c review11.c -o review11.o $(CFLAGS)
